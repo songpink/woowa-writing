@@ -47,7 +47,6 @@ Refresh Token은 클라이언트가 갖고 있다가 Access Token이 만료되�
 
 [Kakao Developers](https://developers.kakao.com/docs/latest/ko/kakaologin/android)
 
- [Kakao Developers
 위의 카카오 로그인 공식문서를 보며 따라했다. 하지만 공식문서를 보고도 이해가 되지 않는 부분이 많아, 다른 블로그의 포스팅이나 유튜브 영상도 많이 참고했다.
 
 크게 아래의 두 가지 단계로 구현할 수 있다.
@@ -105,7 +104,7 @@ Refresh Token은 클라이언트가 갖고 있다가 Access Token이 만료되�
 
 먼저 카카오 SDK를 사용하는 액티비티(AuthCodeHandlerActivity)를 선언해야 한다. 아래 코드를 Manifest에 추가하면 된다.
 
-```
+```xml
 <activity 
     android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
     android:exported="true">
@@ -127,7 +126,7 @@ Refresh Token은 클라이언트가 갖고 있다가 Access Token이 만료되�
 
 다음으로 로그인을 관리할 Activity를 선언해 준 후, 아래 코드를 사용해 주자.
 
-```
+```kotlin
 // 로그인 조합 예제
 
 // 카카오계정으로 로그인 공통 callback 구성
@@ -178,7 +177,7 @@ _카카오 로그인 공식문서에서 제공한 코드다. 이 코드를 그�
 
 카카오 공식문서에서 친절하게 각 상황에 대한 주석을 달아두었으니, 쉽게 이해할 수 있을 것이다.
 
-```
+```kotlin
 UserApiClient.instance.loginWithKakaoTalk(context) { token, error ->
     if (error != null) {
         Log.e(TAG, "로그인 실패", error)
@@ -199,7 +198,7 @@ UserApiClient.instance.loginWithKakaoTalk(context) { token, error ->
 
 카카오 SDK를 사용하기 위해 다음 코드를 Manifest에 추가하면서 문제가 생겼다.
 
-```
+```xml
 <activity 
     android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
     android:exported="true">
