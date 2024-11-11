@@ -261,4 +261,6 @@ Activity를 만들었으니 뭔가를 넣어야겠지?라고 생각했지만 공
 
 ## 참고
 https://developers.kakao.com/docs/latest/ko/kakaologin/android
+
 https://developers.kakao.com/
+
